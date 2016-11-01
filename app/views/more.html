@@ -1,0 +1,40 @@
+<div ng-controller="more">
+	<div class="nav">
+		<span class="glyphicon glyphicon-chevron-left" ui-sref="index"></span>
+		<!--<a class="glyphicon glyphicon-trash" ng-click="del()"></a>-->
+		<a class="glyphicon glyphicon-floppy-saved"  data-toggle="modal" data-target="#myModal"></a>
+	</div>
+	
+	<div class="container ng-scope">
+		<div class="panel panel-default" style="margin-top: 3.5rem">
+			<div>
+				<div class="panel-heading">
+					<h3 class="panel-title" >{{data1.title}}</h3>
+				</div>
+				
+				<div class="panel-body">
+					<div style="border-bottom:1px solid #eee;color:#777;margin-bottom:5px" class="date">2016-10-11</div>
+					{{data1.content}}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="myModalLabel">编  辑</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="panel-title" ng-model="data1.title" />
+					<textarea class="panel-body" ng-model="data1.content" style="margin-top: 1rem;"></textarea>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" ng-click="save()" data-toggle="modal" data-target="#myModal">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

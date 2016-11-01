@@ -1,0 +1,18 @@
+<div ng-controller="add">
+	<div class="nav">
+		<span class="glyphicon glyphicon-chevron-left" ui-sref="index"></span>
+		<a class="glyphicon glyphicon-saved" ng-click="add()"></a>
+	</div>
+	<div class="container">
+		<form role="form" class="ng-pristine ng-valid" style="margin-top: 3.7rem;">
+			<div class="form-group"> 
+				<label>标题</label> 
+				<input type="text" class="form-control input-lg" ng-model="updata.title"> 
+			</div>
+			<div class="form-group"> 
+				<label for="exampleInputPassword1">内容</label> 
+				<textarea class="form-control input-lg" rows="5" ng-model="updata.content"></textarea> 
+			</div>
+		</form>
+	</div>
+</div>
